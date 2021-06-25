@@ -5,24 +5,17 @@ function compute() {
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
     var year = new Date().getFullYear()+parseInt(years);
-    var amount = principal * years * rate;
-    var result = document.getElementById("result").innerHTML="If you deposit <mark>"+principal+"</mark>,\<br\>at an interest rate of <mark>"+rate+"%</mark>\<br\>You will receive an amount of <mark>"+amount+"</mark>,\<br\>in the year <mark>"+year+"</mark>\<br\>";
+    var result = document.getElementById("result").innerHTML="If you deposit <mark>"+principal+"</mark>,\<br\>at an interest rate of <mark>"+rate+"%</mark>\<br\>You will receive an amount of <mark>"+interest+"</mark>,\<br\>in the year <mark>"+year+"</mark>\<br\>";
     
-    
-}
+    if(principal.value <= 0);
+      alert("Please enter a positive number");
+      principal.focus;
+      return true;
+    } 
+  
 //function used to update interest slider
   function updateRate(){
       var rateval = document.getElementById("rate").value;
       document.getElementById("rate_val").innerText=rateval;
-    } 
-  //function used to upadate the principal
-  function updatePrincipal() {
-      if(principal.value == ""){
-      alert("Please type a positive number");
-      principal.focus();
-      return false;
-    }
-    return true;
-      
-  }
-     
+      return true;
+    }   
