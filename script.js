@@ -1,3 +1,4 @@
+//function used to evaluate the interest rate
 function compute() {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
@@ -9,11 +10,12 @@ function compute() {
     
     
 }
+//function used to update interest slider
   function updateRate(){
       var rateval = document.getElementById("rate").value;
       document.getElementById("rate_val").innerText=rateval;
     } 
-  
+  //function used to upadate the principal
   function updatePrincipal() {
       if(principal.value == ""){
       alert("Please type a positive number");
